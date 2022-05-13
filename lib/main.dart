@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pai Tiew',
+      title: 'Pai Tiew ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -29,15 +29,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-      )
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Center());
   }
 }
