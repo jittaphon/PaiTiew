@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paitiew/pages/home/main_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -101,10 +102,19 @@ class _LoginFormState extends State<LoginForm> {
                       ],
                     ),
                   ),
-                  child: const Icon(
-                    Icons.arrow_forward_outlined,
-                    color: Colors.white,
-                    size: 32,
+                  child:  IconButton(
+                    icon: const Icon(
+                      Icons.arrow_forward_outlined,
+                      color: Colors.white,
+                      size: 32,
+                    ),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        // ignore: prefer_const_constructors
+                        builder: (context) => MainScreen(),
+                      ),
+                    ),
                   ),
                 ),
               ),
