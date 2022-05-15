@@ -8,9 +8,9 @@ class Constants {
   //Colors for theme
   static Color lightPrimary = Color(0xfffcfcff);
   static Color darkPrimary = Colors.black;
-  static Color lightAccent = Color(0xff5563ff);
-  static Color darkAccent = Color(0xff5563ff);
-  static Color lightBG = Color(0xfffcfcff);
+  static Color lightAccent = Color(0xff2FC4B2);
+  static Color darkAccent = Color(0xff117C6F);
+  static Color lightBG = Color(0xffE5E5E5);
   static Color darkBG = Colors.black;
   static Color ratingBG = Colors.yellow;
 
@@ -18,7 +18,6 @@ class Constants {
     backgroundColor: lightBG,
     primaryColor: lightPrimary,
     accentColor: lightAccent,
-    cursorColor: lightAccent,
     scaffoldBackgroundColor: lightBG,
     appBarTheme: AppBarTheme(
       textTheme: TextTheme(
