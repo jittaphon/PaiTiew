@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:paitiew/pages/detail.dart';
+import 'package:paitiew/pages/detail/detail.dart';
 
 
 import 'constant/constants.dart';
@@ -16,8 +16,8 @@ import 'pages/home/main_screen.dart';
       home: DetailPage(),
     );
   }
-}
-void main() async {
+
+/*void main() async {
   runApp(MyApp());
 }
 
@@ -43,3 +43,4 @@ class _MyAppState extends State<MyApp> {
   }
 }
 }
+*/

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paitiew/constant/constants.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -15,7 +16,6 @@ class _DetailPageState extends State<DetailPage> {
         body: ListView(
           children: [
             Stack(
-
               // ---------------- โซน รูป กับ กดหัวใจ --------------------
               children: [
                 Container(
