@@ -6,6 +6,7 @@ import 'package:paitiew/pages/detail/detail.dart';
 
 import 'package:paitiew/pages/home/home_screen.dart';
 import 'package:paitiew/pages/post/post_screen.dart';
+import 'package:paitiew/pages/profile/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class _MainScreenState extends State<MainScreen> {
 
   List pages = [
     HomeScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -35,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(1, (index) => pages[index]),
+        children: List.generate(2, (index) => pages[index]),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
