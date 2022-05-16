@@ -10,9 +10,12 @@ class PoppularPlaceCard extends StatelessWidget {
     required this.country,
     required this.press,
     required this.like,
+    required this.postId,
+    required this.userImage,
+    required this.username,
   }) : super(key: key);
 
-  final String image, place, country, like;
+  final String image, place, country, like, postId, userImage, username;
   final Function press;
 
   @override
@@ -29,8 +32,8 @@ class PoppularPlaceCard extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.white,
-              image: DecorationImage(
-                  image: NetworkImage(image), fit: BoxFit.cover),
+              image:
+                  DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
               boxShadow: [
                 BoxShadow(
                     offset: Offset(3, 3),

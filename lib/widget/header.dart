@@ -12,7 +12,7 @@ class HeaderWithNoti extends StatelessWidget {
       children: [
         Container(
             padding: EdgeInsets.only(
-              top: 80,
+              top: 10,
               left: 20,
             ),
             child: Row(children: [
