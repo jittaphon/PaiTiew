@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:keyboard_visibility/keyboard_visibility.dart';
 import 'package:paitiew/constant/constants.dart';
 import 'package:paitiew/pages/Login/login.dart';
 import 'package:paitiew/pages/detail/detail.dart';
 
 import 'package:paitiew/pages/home/home_screen.dart';
+import 'package:paitiew/pages/post/post_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -13,19 +15,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  bool floatingActionButtonVisible = true;
   late PageController _pageController;
   int _page = 0;
 
   List icons = [
-    // Icons.login,
     Icons.home,
-    // Icons.details,
-    // Icons.notifications,
     Icons.person,
   ];
 
   List pages = [
-    // const Login(),
     HomeScreen(),
     const DetailPage(),
   ];
@@ -41,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
-          mainAxisSize: MainAxisSize.max,
+          // mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             // SizedBox(width: 7),
@@ -55,13 +54,17 @@ class _MainScreenState extends State<MainScreen> {
       ),
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        elevation: 10.0,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
+      floatingActionButton: Visibility(
+        visible: floatingActionButtonVisible,
+        child: FloatingActionButton(
+          elevation: 10.0,
+          child: const Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+          onPressed: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const PostScreen())),
         ),
-        onPressed: () => _pageController.jumpToPage(1),
       ),
     );
   }
@@ -70,6 +73,14 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     super.initState();
     _pageController = PageController();
+
+    KeyboardVisibilityNotification().addNewListener(
+      onChange: (bool visible) {
+        setState(() {
+          floatingActionButtonVisible = !visible;
+        });
+      },
+    );
   }
 
   @override

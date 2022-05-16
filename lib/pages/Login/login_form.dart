@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paitiew/constant/constants.dart';
 import 'package:paitiew/pages/home/main_screen.dart';
 
 class LoginForm extends StatefulWidget {
@@ -67,9 +68,9 @@ class _LoginFormState extends State<LoginForm> {
                       child: const TextField(
                         obscureText: true,
                         decoration: InputDecoration(
-                          hintStyle: TextStyle(fontSize: 22),
+                          hintStyle: const TextStyle(fontSize: 22),
                           border: InputBorder.none,
-                          icon: Icon(Icons.account_circle_rounded),
+                          icon: const Icon(Icons.account_circle_rounded),
                           hintText: "********",
                         ),
                       ),
