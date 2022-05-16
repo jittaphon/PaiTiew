@@ -70,12 +70,12 @@ class _PostScreenState extends State<PostScreen> {
 
       // stop the loading
       // show a success message
-      posts.add({
+      Post.posts.add({
         "userId": "3",
         "username": "Alice",
         "userImage": "assets/images/profile/rabbit.jpg",
         "image": "assets/images/post/windmil.jpg",
-        "country": "USA",
+        "country": "hfghdfhgfghdfgf",
         "city": "New York",
         "postId": "7",
         "title": "New York",

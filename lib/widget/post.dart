@@ -3,8 +3,8 @@ import 'package:paitiew/pages/detail/detail.dart';
 import 'package:paitiew/widget/post_card.dart';
 import 'package:paitiew/util/post.dart';
 
-class Post extends StatelessWidget {
-  const Post({
+class PostPage extends StatelessWidget {
+  const PostPage({
     Key? key,
   }) : super(key: key);
 
@@ -13,9 +13,9 @@ class Post extends StatelessWidget {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: posts == null ? 0 : posts.length,
+      itemCount: Post.posts == null ? 0 : Post.posts.length,
       itemBuilder: (context, index) {
-        Map post = posts[index];
+        Map post = Post.posts[index];
 
         return GestureDetector(
            onTap: () {

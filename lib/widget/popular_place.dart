@@ -13,6 +13,7 @@ class PoppularPlace extends StatefulWidget {
 }
 
 class _PoppularPlaceState extends State<PoppularPlace> {
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,9 +21,9 @@ class _PoppularPlaceState extends State<PoppularPlace> {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        itemCount: posts == null ? 0 : posts.length,
+        itemCount: Post.posts == null ? 0 : Post.posts.length,
         itemBuilder: (context, index) {
-          Map post = posts[index];
+          Map post = Post.posts[index];
 
           return GestureDetector(
             onTap: () {

@@ -1,4 +1,5 @@
-List posts = [
+class Post {
+ static  List posts = [
   {
     "userId": "1",
     "username": "Jhon",
@@ -84,3 +85,5 @@ List posts = [
     "press": () {},
   },
 ];
+
+}

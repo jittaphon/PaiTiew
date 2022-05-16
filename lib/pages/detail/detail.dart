@@ -87,7 +87,7 @@ class _DetailPageState extends State<DetailPage> {
 
   Future<bool> onLikeButtonTapped(bool isLiked) async {
     Future.delayed(const Duration(milliseconds: 500), () {
-      Navigator.push(
+      Navigator.pop(
           context, MaterialPageRoute(builder: (context) => HomeScreen()));
     });
 

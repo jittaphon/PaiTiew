@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
             indent: 15,
             endIndent: 15,
           ),
-          Post(),
+          PostPage(),
         ],
       ),
     );
