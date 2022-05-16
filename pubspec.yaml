@@ -39,6 +39,8 @@ dependencies:
   like_button: ^2.0.4
   geolocator: ^8.0.1
   google_maps_flutter: ^2.1.1
+  image_gallery_saver: ^1.7.1
+  path_provider: ^2.0.10
 
 dev_dependencies:
   flutter_test:

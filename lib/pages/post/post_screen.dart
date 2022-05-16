@@ -1,7 +1,12 @@
+import 'dart:io';
 import 'dart:typed_data';
+import 'package:flutter/services.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:flutter/material.dart';
+import 'package:paitiew/util/post.dart';
+import 'package:path_provider/path_provider.dart';
 
 class PostScreen extends StatefulWidget {
   const PostScreen({Key? key}) : super(key: key);
@@ -55,32 +60,38 @@ class _PostScreenState extends State<PostScreen> {
     );
   }
 
-  void postImage(String userId, String username, String user) async {
+  void postImage() async {
     setState(() {
       isLoading = true;
     });
     // start the loading
     try {
-      // upload to storage and db
-      // String res = await FireStoreMethods().uploadPost(
-      //   _descriptionController.text,
-      //   _file!,
-      //   uid,
-      //   username,
-      //   profImage,
-      // );
-      // if (res == "success") {
-      //   setState(() {
-      //     isLoading = false;
-      //   });
-      //   showSnackBar(
-      //     context,
-      //     'Posted!',
-      //   );
-      //   clearImage();
-      // } else {
-      //   showSnackBar(context, res);
-      // }
+      // save the image
+
+      // stop the loading
+      // show a success message
+      posts.add({
+        "userId": "3",
+        "username": "Alice",
+        "userImage": "assets/images/profile/rabbit.jpg",
+        "image": "assets/images/post/windmil.jpg",
+        "country": "USA",
+        "city": "New York",
+        "postId": "7",
+        "title": "New York",
+        "place": "New York",
+        "like": "2",
+        "comment": "0",
+        "press": () {},
+      });
+      setState(() {
+        isLoading = false;
+      });
+      showSnackBar(
+        context,
+        'Posted!',
+      );
+      clearImage();
     } catch (err) {
       setState(() {
         isLoading = false;
@@ -157,7 +168,6 @@ class _PostScreenState extends State<PostScreen> {
                   const SizedBox(height: 10),
                   Row(
                     children: [
-                      
                       IconButton(
                         icon: const Icon(Icons.arrow_back),
                         onPressed: clearImage,
@@ -165,11 +175,7 @@ class _PostScreenState extends State<PostScreen> {
                       IconButton(
                         icon: const Icon(Icons.send),
                         onPressed: () {
-                          postImage(
-                            '',
-                            '',
-                            '',
-                          );
+                          postImage();
                         },
                       ),
                     ],
