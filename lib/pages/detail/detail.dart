@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:paitiew/constant/constants.dart';
 
@@ -9,6 +10,8 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  final CarouselController _carouselController = CarouselController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,13 +23,27 @@ class _DetailPageState extends State<DetailPage> {
               children: [
                 Container(
                   height: MediaQuery.of(context).size.height / 1.5,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(),
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
-                      fit: BoxFit.cover,
+                  // decoration: BoxDecoration(
+                  //   borderRadius: BorderRadius.only(),
+                  //   image: DecorationImage(
+                  //     image: NetworkImage(
+                  //         'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
+                  //     fit: BoxFit.cover,
+                  //   ),
+                  // ),
+                  child: CarouselSlider(
+                    carouselController: _carouselController,
+                    options: CarouselOptions(
+                      height: 400.0,
                     ),
+                    items: [
+                      Image.network(
+                          'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
+                      Image.network(
+                          'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
+                      Image.network(
+                          'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
+                    ],
                   ),
                 ),
                 Positioned(
