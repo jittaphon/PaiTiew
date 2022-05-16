@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paitiew/widget/poppular_card.dart';
+import '../pages/detail/detail.dart';
 
 class PoppularPlace extends StatelessWidget {
   const PoppularPlace({

@@ -33,13 +33,19 @@ class PoppularPlaceCard extends StatelessWidget {
                     spreadRadius: 1,
                     color: Colors.grey.shade400.withOpacity(0.8)),
               ]),
+              
+            
         ),
+        
         Positioned(
             bottom: 15,
             left: 20,
             child: Text('Vegetables',
                 style: TextStyle(fontSize: 16, color: Colors.white)))
+
+       
       ],
+      
     ));
   }
 }
