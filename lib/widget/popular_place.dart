@@ -16,21 +16,21 @@ class PoppularPlace extends StatelessWidget {
           PoppularPlaceCard(
             image:
                 "https://cdn.pixabay.com/photo/2021/12/15/07/29/saint-isaac-cathedral-6871954_960_720.jpg",
-            title: "Chiang Mai",
+            place: "Chiang Mai",
             country: "Thailand",
             press: () {},
           ),
           PoppularPlaceCard(
             image:
                 "https://cdn.pixabay.com/photo/2021/07/20/17/15/dome-of-rock-6481240_960_720.jpg",
-            title: "Chiang Mai",
+            place: "Chiang Mai",
             country: "Thailand",
             press: () {},
           ),
           PoppularPlaceCard(
             image:
                 "https://cdn.pixabay.com/photo/2019/06/13/11/22/golden-gate-bridge-4271364_960_720.jpg",
-            title: "Chiang Mai",
+            place: "Chiang Mai",
             country: "Thailand",
             press: () {},
           ),
