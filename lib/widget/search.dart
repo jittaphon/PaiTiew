@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:paitiew/constant/background.dart';
-import 'package:paitiew/constant/text_constanst.dart';
 
 class SearchAndIcon extends StatelessWidget {
   const SearchAndIcon({
@@ -16,7 +14,8 @@ class SearchAndIcon extends StatelessWidget {
           child: Container(
             height: 50,
             decoration: BoxDecoration(
-              color: BackgroundConstants.primary,
+              color: Color(0xfff3eff5),
+              // color: BackgroundConstants.primary,
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
@@ -24,7 +23,6 @@ class SearchAndIcon extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.only(left: 20),
-                    // padding: EdgeInsets.all(10),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Search",

@@ -95,6 +95,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -177,6 +178,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.6"
+=======
+  like_button:
+    dependency: "direct main"
+    description:
+      name: like_button
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.4"
+>>>>>>> main
   lints:
     dependency: transitive
     description:
