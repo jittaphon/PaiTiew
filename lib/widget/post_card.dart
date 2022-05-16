@@ -28,19 +28,29 @@ class PostCard extends StatelessWidget {
         children: [
           const SizedBox(height: 2),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 15),
             child: Row(
               children: [
                 Container(
                     width: 35,
                     height: 35,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: NetworkImage(userImage),
-                        fit: BoxFit.cover,
-                      ),
-                    )),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(userImage),
+                          fit: BoxFit.cover,
+                        ),
+                        border: Border.all(
+                            color: Colors.black.withOpacity(0.3), width: 0.5),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 0),
+                            blurRadius: 2,
+                            spreadRadius: 2,
+                            color: Color.fromARGB(255, 93, 93, 93)
+                                .withOpacity(0.2),
+                          ),
+                        ])),
                 const SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,7 +59,7 @@ class PostCard extends StatelessWidget {
                       "$username",
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w700,
                         fontFamily: "IBM",
                       ),
@@ -80,7 +90,7 @@ class PostCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 8),
+            padding: const EdgeInsets.only(left: 25, top: 8),
             child: Text(
               " $title #$place #$country ",
               style: const TextStyle(
@@ -92,21 +102,21 @@ class PostCard extends StatelessWidget {
           ),
           Stack(children: [
             Padding(
-              padding: const EdgeInsets.only(left: 15, top: 3),
+              padding: const EdgeInsets.only(left: 25, top: 3),
               child: Container(
                   height: 340,
                   width: 340,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: NetworkImage(image),
+                      image: AssetImage(image),
                       fit: BoxFit.cover,
                     ),
                   )),
             ),
             Positioned(
-              bottom: 10,
-              left: 20,
+              bottom: 15,
+              left: 35,
               child: Row(
                 children: [
                   LikeButton(

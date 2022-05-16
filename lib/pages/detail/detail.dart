@@ -4,10 +4,22 @@ import 'package:paitiew/constant/background.dart';
 import 'package:paitiew/constant/constants.dart';
 import 'package:paitiew/constant/text_constanst.dart';
 import 'package:comment_box/comment/comment.dart';
+import 'package:paitiew/pages/home/home_screen.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  DetailPage({
+    Key? key,
+    required this.postId,
+    required this.image,
+    required this.title,
+    required this.like,
+    required this.place,
+    required this.country,
+    required this.username,
+    required this.userImage,
+  }) : super(key: key);
 
+  String postId, image, title, like, place, country, username, userImage;
   @override
   State<DetailPage> createState() => _DetailPageState();
 }
@@ -15,6 +27,7 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   final formKey = GlobalKey<FormState>();
   final TextEditingController commentController = TextEditingController();
+
   List filedata = [
     {
       'name': 'Adeleye Ayodeji',
@@ -72,6 +85,15 @@ class _DetailPageState extends State<DetailPage> {
     );
   }
 
+  Future<bool> onLikeButtonTapped(bool isLiked) async {
+    Future.delayed(const Duration(milliseconds: 500), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    });
+
+    return !isLiked;
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -86,8 +108,7 @@ class _DetailPageState extends State<DetailPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(),
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://i.pinimg.com/originals/78/eb/e6/78ebe6fd93bc8b63f19e72387b6bfe85.jpg'),
+                      image: AssetImage(widget.image),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -100,13 +121,29 @@ class _DetailPageState extends State<DetailPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Colors.white,
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.black,
-                        ),
-                      ),
+                          radius: 20,
+                          backgroundColor: Colors.white,
+                          child: LikeButton(
+                            onTap: onLikeButtonTapped,
+                            size: 20,
+                            circleSize: 12,
+                            circleColor: CircleColor(
+                                start: Color.fromARGB(255, 183, 61, 79),
+                                end: Color.fromARGB(255, 235, 114, 98)),
+                            bubblesColor: BubblesColor(
+                                dotPrimaryColor: Color(0xfff69c6d),
+                                dotSecondaryColor: Color(0xfff57c73),
+                                dotThirdColor: Color(0xfff6bc66)),
+                            likeBuilder: (bool isLiked) {
+                              return Icon(
+                                Icons.arrow_back,
+                                color: isLiked
+                                    ? BackgroundConstants.iconClick
+                                    : Colors.grey,
+                                size: 22,
+                              );
+                            },
+                          )),
                     ],
                   ),
                 ),
@@ -114,7 +151,7 @@ class _DetailPageState extends State<DetailPage> {
                   top: 450,
                   left: 20,
                   child: LikeButton(
-                    likeCount: 1,
+                    likeCount: int.parse(widget.like),
                     countPostion: CountPostion.right,
                     size: 30,
                     circleSize: 12,
@@ -152,26 +189,30 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           Container(
                             child: Text(
-                              'Aorura',
+                              widget.place,
                               style: TextStyle(
-                                color: TextConstants.subheader,
-                                fontSize: 16,
-                              ),
+                                  color: TextConstants.subheader,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w800,
+                                  fontFamily: "IBM"),
                             ),
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Flexible(
-                              child: Text(
-                            'Auroras are the result of disturbances in the magnetosphere caused by the solar wind. Major disturbances result from enhancements in the speed of the solar wind from coronal holes and coronal mass ejections. These disturbances alter the trajectories of charged particles in the magnetospheric plasma.',
-                            style: TextStyle(
-                              color: TextConstants.primary,
-                              fontSize: 14,
-                            ),
-                          )),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0, top: 10),
+                        child: Row(
+                          children: [
+                            Flexible(
+                                child: Text(
+                              widget.title,
+                              style: TextStyle(
+                                  color: TextConstants.primary,
+                                  fontSize: 15,
+                                  fontFamily: "IBM"),
+                            )),
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 20,
@@ -181,9 +222,10 @@ class _DetailPageState extends State<DetailPage> {
                           Container(
                             child: Text('Comment',
                                 style: TextStyle(
-                                  color: TextConstants.subheader,
-                                  fontSize: 16,
-                                )),
+                                    color: TextConstants.subheader,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w800,
+                                    fontFamily: "IBM")),
                           ),
                         ],
                       ),

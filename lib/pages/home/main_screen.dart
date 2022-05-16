@@ -26,7 +26,6 @@ class _MainScreenState extends State<MainScreen> {
 
   List pages = [
     HomeScreen(),
-    const DetailPage(),
   ];
 
   @override
@@ -36,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(2, (index) => pages[index]),
+        children: List.generate(1, (index) => pages[index]),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
