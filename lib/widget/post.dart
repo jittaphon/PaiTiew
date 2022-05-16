@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:paitiew/constant/text_constanst.dart';
 import 'package:paitiew/widget/post_card.dart';
 
 class Post extends StatelessWidget {
@@ -26,6 +25,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "15",
+                    comment: "2",
                     press: () {},
                   ),
                   PostCard(
@@ -37,6 +38,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "15",
+                    comment: "2",
                     press: () {},
                   ),
                   PostCard(
@@ -48,6 +51,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "15",
+                    comment: "2",
                     press: () {},
                   ),
                   PostCard(
@@ -59,6 +64,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "22",
+                    comment: "9",
                     press: () {},
                   ),
                   PostCard(
@@ -70,6 +77,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "10",
+                    comment: "8",
                     press: () {},
                   ),
                   PostCard(
@@ -81,6 +90,8 @@ class Post extends StatelessWidget {
                     place: "Chiang Mai",
                     country: "Thailand",
                     title: "Happy",
+                    like: "10",
+                    comment: "6",
                     press: () {},
                   ),
                 ],
