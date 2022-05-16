@@ -4,12 +4,12 @@ class PoppularPlaceCard extends StatelessWidget {
   const PoppularPlaceCard({
     Key? key,
     required this.image,
-    required this.title,
+    required this.place,
     required this.country,
     required this.press,
   }) : super(key: key);
 
-  final String image, title, country;
+  final String image, place, country;
   final Function press;
 
   @override
@@ -18,7 +18,7 @@ class PoppularPlaceCard extends StatelessWidget {
         child: Stack(
       children: [
         Container(
-          margin: EdgeInsets.only(left: 10, top: 10, bottom: 10),
+          margin: EdgeInsets.all(10),
           height: 225,
           width: 200,
           decoration: BoxDecoration(
@@ -33,19 +33,14 @@ class PoppularPlaceCard extends StatelessWidget {
                     spreadRadius: 1,
                     color: Colors.grey.shade400.withOpacity(0.8)),
               ]),
-              
-            
-        ),
-        
+        ) ,
         Positioned(
-            bottom: 15,
+            bottom: 18,
             left: 20,
-            child: Text('Vegetables',
-                style: TextStyle(fontSize: 16, color: Colors.white)))
-
-       
+            child: Text('$place, $country',
+                style: TextStyle(
+                    fontSize: 16, color: Colors.white, fontFamily: "IBM")))
       ],
-      
     ));
   }
 }
