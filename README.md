@@ -12,19 +12,19 @@ Star⭐ the repo if you like what you see😉.
 
 | 1 | 2|
 |------|-------|
-|<img src="assets/images/readme/1.png" width="400">|<img src="assets/images/readme/2.png" width="400">|
+|<img src="assets/images/readMe/1.png" width="400">|<img src="assets/images/readMe/2.png" width="400">|
 
 | 3 | 4|
 |------|-------|
-|<img src="assets/images/readme/3.png" width="400">|<img src="assets/images/readme/4.png" width="400">|
+|<img src="assets/images/readMe/3.png" width="400">|<img src="assets/images/readMe/4.png" width="400">|
 
 | 5 | 6|
 |------|-------|
-|<img src="assets/images/readme/5.png" width="400">|<img src="assets/images/readme/6.png" width="400">|
+|<img src="assets/images/readMe/5.png" width="400">|<img src="assets/images/readMe/6.png" width="400">|
 
 | 7 |
 |------|
-|<img src="assets/images/readme/7.png" width="400">|
+|<img src="assets/images/readMe/7.png" width="400">|
 
 ## ✨ Requirements
 * Operating System (Windows, Android, Mac Os)
