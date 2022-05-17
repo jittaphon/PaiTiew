@@ -3,9 +3,12 @@
 Flutter representation of a Travel app UI. 
 
 Star⭐ the repo if you like what you see😉.
-[![Figma](https://www.figma.com/file/V42EB9yhPMFjL3rKCcfI7O/Pai-Tiew?node-id=0%3A1)]
+## Figma Link
+(https://www.figma.com/file/V42EB9yhPMFjL3rKCcfI7O/Pai-Tiew?node-id=0%3A1)
+
 
 ## 📸 ScreenShots
+
 
 | 1 | 2|
 |------|-------|
