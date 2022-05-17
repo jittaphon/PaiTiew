@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
-          // mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             // SizedBox(width: 7),
@@ -64,7 +64,7 @@ class _MainScreenState extends State<MainScreen> {
             color: Colors.white,
           ),
           onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const PostScreen())),
+              MaterialPageRoute(builder: (context) => const PostScreen())).then((value) => setState(() {})),
         ),
       ),
     );
