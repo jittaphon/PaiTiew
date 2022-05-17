@@ -41,6 +41,7 @@ dependencies:
   google_maps_flutter: ^2.1.1
   image_gallery_saver: ^1.7.1
   path_provider: ^2.0.10
+  flutter_fast_forms: ^7.0.0
 
 dev_dependencies:
   flutter_test:
