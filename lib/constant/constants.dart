@@ -6,11 +6,11 @@ class Constants {
   static String appName = "Pai Tiew";
 
   //Colors for theme
-  static Color lightPrimary = const Color(0xfffcfcff);
+  static Color lightPrimary =  Colors.white;
   static Color darkPrimary = Colors.black;
   static Color lightAccent = const Color(0xff2FC4B2);
   static Color darkAccent = const Color(0xff117C6F);
-  static Color lightBG = const Color(0xffE5E5E5);
+  static Color lightBG = Colors.white;
   static Color darkBG = Colors.black;
   static Color ratingBG = Colors.yellow;
   

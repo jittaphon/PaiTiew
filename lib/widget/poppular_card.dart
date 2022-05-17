@@ -49,7 +49,7 @@ class PoppularPlaceCard extends StatelessWidget {
             children: [
               CircleAvatar(
                   radius: 20,
-                  backgroundColor: Colors.white.withOpacity(0.7),
+                  backgroundColor: Colors.white,
                   child: LikeButton(
                     size: 20,
                     circleSize: 12,

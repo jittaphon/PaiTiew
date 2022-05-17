@@ -181,7 +181,7 @@ class _DetailPageState extends State<DetailPage> {
                   margin: EdgeInsets.only(top: 490),
                   height: 500,
                   decoration: BoxDecoration(
-                    color: Color(0xfff3eff5),
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
