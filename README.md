@@ -3,6 +3,7 @@
 Flutter representation of a Travel app UI. 
 
 Star⭐ the repo if you like what you see😉.
+[![Figma](https://www.figma.com/file/V42EB9yhPMFjL3rKCcfI7O/Pai-Tiew?node-id=0%3A1)]
 
 ## 📸 ScreenShots
 
@@ -13,3 +14,13 @@ Star⭐ the repo if you like what you see😉.
 | 3 | 4|
 |------|-------|
 |<img src="assets/images/readMe/3.png" width="400">|<img src="assets/images/readMe/4.png" width="400">|
+
+## ✨ Requirements
+* Operating System (Windows, Android, Mac Os)
+* Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
+* A little knowledge of Dart and Flutter
+
+## Getting Started
+
+```dart
+flutter run --no-sound-null-safety; 
