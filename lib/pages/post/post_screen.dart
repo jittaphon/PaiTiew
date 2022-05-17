@@ -1,12 +1,6 @@
 // import 'dart:io';
 import 'dart:typed_data';
-<<<<<<< HEAD
 import 'package:flutter/services.dart';
-=======
-// import 'package:flutter/services.dart';
-// import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:flutter_fast_forms/flutter_fast_forms.dart';
->>>>>>> Dev-non
 import 'package:image_picker/image_picker.dart';
 
 import 'package:flutter/material.dart';
@@ -17,10 +11,6 @@ import 'package:paitiew/pages/Login/login_background.dart';
 import 'package:paitiew/pages/home/home_screen.dart';
 import 'package:paitiew/pages/home/main_screen.dart';
 import 'package:paitiew/util/post.dart';
-<<<<<<< HEAD
-=======
-// import 'package:path_provider/path_provider.dart';
->>>>>>> Dev-non
 
 class PostScreen extends StatefulWidget {
   const PostScreen({Key? key}) : super(key: key);
