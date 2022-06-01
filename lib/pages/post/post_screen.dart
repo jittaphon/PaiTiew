@@ -1,6 +1,7 @@
 // import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/services.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:flutter/material.dart';
@@ -81,6 +82,9 @@ class _PostScreenState extends State<PostScreen> {
       isLoading = true;
     });
     try {
+      // save image
+      await ImageGallerySaver.saveImage(_file!);
+
       Post.posts.add({
         "userId": "3",
         "username": "Alice",
